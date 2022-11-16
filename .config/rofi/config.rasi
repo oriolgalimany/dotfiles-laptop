@@ -1,0 +1,99 @@
+configuration 
+{
+  display-drun: "";
+  /*display-window: "Windows:";*/
+  drun-display-format: "{icon} {name}";
+  font: "Noto Sans Nerd Font 12";
+  modi: "window,run,drun";
+  show-icons: true;
+}
+
+@theme "/dev/null"
+@import "colors-tokyonight.rasi"
+
+* {
+  background-color: @backgroundColor;
+  
+  border: 0;
+  border-color: Red;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 35%;
+  border-radius: 5px;
+  border: 0; 
+  border-color: @borderColor;
+}
+
+element {
+  padding: 8 8;
+  margin: 0 6;
+  text-color: @textColor;
+  background-color: transparent;
+}
+
+element selected {
+  --text-color: @selected-text;
+  text-color: @textColor;
+  --background-color: @elementSelectedColor;
+  border-radius: 3px;
+  border: 1;
+  border-color: @elementSelectedColor;
+
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 32;
+  background-color: transparent;
+}
+
+entry {
+  background-color: @backgroundColor-alt;
+  padding: 12;
+  text-color: @textColor;
+}
+
+inputbar {
+  children: [prompt, entry];
+  underline: 1;
+  underline-color: Blue;
+}
+
+listview {
+  padding: 8 4;
+  background-color: @backgroundColor;
+  columns: 1;
+  lines: 7;
+  scrollbar: true;
+}
+
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+    handle-color: @scrollbarHandleColor;
+    background-color: transparent;
+}
+
+mainbox {
+  background-color: @backgroundColor;
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: transparent;
+  enabled: true;
+  padding: 12 0 0 22;
+  margin: 0 0;
+  text-color: @textColor;
+}
