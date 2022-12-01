@@ -103,7 +103,7 @@ set termguicolors
 
 "let g:tokyonight_style = 'night' "available: night, storm
 "let g:tokyonight_enable_italic = 1
-colorscheme tokyonight
+"colorscheme tokyonight
 
 "let g:gruvbox_contrast_dark='hard'
 "colorscheme gruvbox
@@ -112,7 +112,7 @@ colorscheme tokyonight
 "colorscheme rvcs
 "colorscheme iceberg
 "colorscheme jellybeans
-"colorscheme night-owl
+colorscheme night-owl
 
 "colorscheme onedark
 "let g:onedark_termcolors=256
@@ -139,6 +139,9 @@ inoremap <c-s> <Esc>:w<CR>a
 
 " toggle undotree
 nnoremap <leader>u :UndotreeToggle<CR>
+
+" clear search highlights
+nnoremap <leader>n :noh<CR>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
