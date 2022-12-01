@@ -154,6 +154,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# play-pause spotify
+bindsym $mod+Shift+p exec playerctl play-pause -p spotify
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -238,11 +241,14 @@ client.background       #FFFFFF
 for_window [class="^.*"] border pixel 0
 
 # same random wallpaper for both screens
-set $random_wallpaper  $(shuf -n 1 -e  ~/Imatges/wallpapers/*)
-exec_always --no-startup-id feh --bg-fill $random_wallpaper
+exec_always --no-startup-id feh --randomize --bg-fill ~/Imatges/wallpapers/*
+exec --no-startup-id systemd-run --on-calendar="*-*-* *:00:00" --user -- \
+    feh --no-fehbg --bg-fill --randomize -r ~/Imatges/wallpapers
 
 exec_always --no-startup-id picom --experimental-backends
-exec_always --no-startup-id xset r rate 240 40 #decrease keyboard repetition delay and increase the repeat rate
+
+#decrease keyboard repetition delay and increase the repeat rate
+exec_always --no-startup-id xset r rate 240 40 
 
 # set betterlockscreen
 exec --no-startup-id betterlockscreen -w 
