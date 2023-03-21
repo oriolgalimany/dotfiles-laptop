@@ -10,7 +10,8 @@ configuration
 }
 
 @theme "/dev/null"
-@import "colors-tokyonight.rasi"
+/*@import "colors-tokyonight.rasi"*/
+@import "colors-flatremix.rasi"
 
 * {
   background-color: @backgroundColor;

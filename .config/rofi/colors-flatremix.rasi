@@ -1,0 +1,12 @@
+/* colors */
+
+* {
+    borderColor: #377cf1;
+    backgroundColor: #272a3488;
+    backgroundColor-alt: #272a3400;
+    elementSelectedColor: #377cf1;
+    scrollbarHandleColor: #377cf1;
+    textColor:  #C5C8C6;
+    el-text:  #377cf1;
+    selected-text: #1a1b26;
+}
