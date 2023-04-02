@@ -85,11 +85,5 @@ return require('packer').startup(function(use)
     }
 
     -- toggle between relative numbers and absolute depending on thefocus
-    use {
-        "sitiom/nvim-numbertoggle",
-        config = function()
-            require("numbertoggle").setup()
-        end
-    }
-
+    use { "sitiom/nvim-numbertoggle" }
 end)

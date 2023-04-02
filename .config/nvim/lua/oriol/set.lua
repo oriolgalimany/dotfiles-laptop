@@ -46,23 +46,3 @@ vim.opt.ignorecase = true
 -- toggle relative numbers on focus
 vim.api.nvim_create_augroup("numbertoggle", { clear = true })
 
---augroup numbertoggle
---  autocmd!
---  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
---  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
---augroup END
-
-
---vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained", "InsertLeave", "WinEnter" }, {
---  callback = function()
---    vim.opt.relativenumber = true
---  end,
- -- group = "numbertoggle",
---})
-
---vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "WinLeave"}, {
---  callback = function()
---    vim.opt.relativenumber = false
---  end,
---  group = "numbertoggle",
---})
