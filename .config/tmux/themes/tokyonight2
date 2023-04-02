@@ -1,0 +1,4 @@
+set-option -g status-style 'bg=#373951,fg=#b9c2eb'
+set-option -g pane-active-border-style 'fg=#b9c2eb'
+set-option -g status-right "%a %d-%m-%Y  %H:%M " 
+set-window-option -g window-status-current-style 'bg=#cbff88,fg=#1a1b26'
