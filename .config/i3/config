@@ -246,9 +246,6 @@ exec_always --no-startup-id xset r rate 240 40
 # set betterlockscreen
 exec --no-startup-id betterlockscreen -w 
 
-# Alternative (set last used background)
-exec --no-startup-id source ~/.fehbg
-
 # swap ctrl and alt keys
 #exec_always --no-startup-id xmodmap ~/.config/Xmodmap
 

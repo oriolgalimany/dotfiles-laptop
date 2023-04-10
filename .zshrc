@@ -107,10 +107,19 @@ export LANG=ca_ES.UTF-8
 
 # enable zsh vim mode
 bindkey -v 
+export KEYTIMEOUT=1
 # set default esc to jk and kj
 bindkey -M viins 'jk' vi-cmd-mode
 bindkey -M viins 'kj' vi-cmd-mode
-
+# use vimkeys in tab complete menu
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'left' vi-backward-char
+bindkey -M menuselect 'down' vi-down-line-or-history
+bindkey -M menuselect 'up' vi-up-line-or-history
+bindkey -M menuselect 'right' vi-forward-char
 
 # Example aliases
 #cd(){builtin cd "$@" && ls;}
