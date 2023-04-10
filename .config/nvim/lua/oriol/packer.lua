@@ -30,6 +30,8 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme tokyonight')
         end
     })
+  
+    use { "catppuccin/nvim", as = "catppuccin" }
    
     -- treesitter syntax highlighting
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
