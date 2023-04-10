@@ -44,7 +44,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec --no-startup-id alacritty
 #bindcode 64 exec polybar-msg cmd show
-#bindcode 64 --release exec polybar-msg cmd toggle
+#bindcode 64 --release exec polybar-msg cmd hide
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -234,9 +234,9 @@ client.background       #FFFFFF
 for_window [class="^.*"] border pixel 0
 
 # same random wallpaper for both screens
-exec_always --no-startup-id feh --randomize --bg-fill ~/Imatges/wallpapers/*
+exec_always --no-startup-id feh --randomize --bg-fill ~/Imatges/wallpapers/current/*
 exec_always --no-startup-id systemd-run --on-calendar="*-*-* *:00:00" --user -- \
-    feh --no-fehbg --bg-fill --randomize -r ~/Imatges/wallpapers && betterlockscreen -u ~/Imatges/wallpapers
+    feh --no-fehbg --bg-fill --randomize -r ~/Imatges/wallpapers/current && betterlockscreen -u ~/Imatges/wallpapers/current
 
 exec_always --no-startup-id picom --experimental-backends
 
