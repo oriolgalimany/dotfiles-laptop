@@ -72,7 +72,12 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git web-search copypath)
+plugins=(
+    git 
+    web-search 
+    copypath 
+    vi-mode
+)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -99,7 +104,14 @@ export LANG=ca_ES.UTF-8
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
+# enable zsh vim mode
+bindkey -v 
+# set default esc to jk and kj
+bindkey -M viins 'jk' vi-cmd-mode
+bindkey -M viins 'kj' vi-cmd-mode
+
+
 # Example aliases
 #cd(){builtin cd "$@" && ls;}
 #alias ls="ls -lah --color=always"
