@@ -52,7 +52,8 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#005577' -sf '#EEEEEE' -fn 'monospace-10'"
 bindsym $mod+space exec rofi -show drun -config ~/.config/rofi/config.rasi
-
+bindsym $mod+Shift+e exec rofi -show power-menu -config ~/.config/rofi/config-powermenu.rasi -modi "power-menu:~/.config/rofi/rofi-power-menu --choices=lockscreen/suspend/logout/reboot/shutdown --confirm='' --no-text"
+ 
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -188,7 +189,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Shift+e mode "$mode_system"
+#bindsym $mod+Shift+e mode "$mode_system"
 
 # class                 border  bground text    indicator child_border
 client.focused          #83CAFA #51A2DA #FFFFFF #83CAFA   #51A2DA

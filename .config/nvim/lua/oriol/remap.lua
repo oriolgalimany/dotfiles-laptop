@@ -9,6 +9,3 @@ vim.keymap.set("i", "kj", "<esc>")
 
 -- clear search highlights
 vim.keymap.set("n", "<leader>n", ":noh<CR>")
-
--- test
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")

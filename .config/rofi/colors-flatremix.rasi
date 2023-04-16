@@ -2,8 +2,10 @@
 
 * {
     borderColor: #377cf1;
+    foregroundColor: #377cf1; 
     backgroundColor: #272a3488;
     backgroundColor-alt: #272a3400;
+    backgroundColor-notransparency: #272a34;
     elementSelectedColor: #377cf1;
     scrollbarHandleColor: #377cf1;
     textColor:  #C5C8C6;

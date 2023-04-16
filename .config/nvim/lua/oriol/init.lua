@@ -1,7 +1,7 @@
 require("oriol.remap")
 require("oriol.set")
-require("oriol.colors")
 require("oriol.packer")
+require("oriol.colors")
 require("oriol.plugin.telescope")
 require("oriol.plugin.treesitter")
 require("oriol.plugin.lualine")
