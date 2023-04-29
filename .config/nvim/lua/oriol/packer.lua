@@ -24,6 +24,14 @@ return require('packer').startup(function(use)
     })
 
     use ({
+        'nyngwang/nvimgelion',
+        config = function ()
+        end
+    })
+
+    use({ 'rose-pine/neovim', as = 'rose-pine' })  
+
+    use ({
         'ghifarit53/tokyonight-vim',
         as = 'tokyonight',
         config = function ()
@@ -33,7 +41,7 @@ return require('packer').startup(function(use)
   
     use { "catppuccin/nvim", as = "catppuccin" }
    
-    -- treesitter syntax highlighting
+   -- treesitter syntax highlighting
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
     -- undotree
