@@ -181,6 +181,12 @@ _G.packer_plugins = {
     path = "/home/oriol/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  nvimgelion = {
+    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    loaded = true,
+    path = "/home/oriol/.local/share/nvim/site/pack/packer/start/nvimgelion",
+    url = "https://github.com/nyngwang/nvimgelion"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/oriol/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -219,6 +225,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for night-owl]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme night-owl\bcmd\bvim\0", "config", "night-owl")
 time([[Config for night-owl]], false)
+-- Config for: nvimgelion
+time([[Config for nvimgelion]], true)
+try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "nvimgelion")
+time([[Config for nvimgelion]], false)
 -- Config for: tokyonight
 time([[Config for tokyonight]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\27colorscheme tokyonight\bcmd\bvim\0", "config", "tokyonight")
