@@ -15,6 +15,9 @@ vim.opt.smartindent = true
 -- don't let text exceed window size
 vim.opt.wrap = true
 
+-- don't show the command line when it's not needed
+vim.opt.cmdheight=0
+
 -- true colors
 vim.opt.termguicolors = true
 
