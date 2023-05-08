@@ -29,7 +29,7 @@ return require('packer').startup(function(use)
         end
     })
 
-    use({ 'rose-pine/neovim', as = 'rose-pine' })  
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     use ({
         'ghifarit53/tokyonight-vim',
@@ -38,9 +38,9 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme tokyonight')
         end
     })
-  
+
     use { "catppuccin/nvim", as = "catppuccin" }
-   
+
    -- treesitter syntax highlighting
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
