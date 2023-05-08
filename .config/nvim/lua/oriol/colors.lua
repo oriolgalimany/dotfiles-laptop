@@ -15,7 +15,6 @@ function SetColorScheme(color)
 
     -- refresh theme
     command= "tmux source-file ~/.config/tmux/themes/theme.conf"
-    print(command)
     os.execute(command)
     os.execute(command)
 end
