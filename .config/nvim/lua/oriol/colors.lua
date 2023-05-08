@@ -5,7 +5,7 @@ function SetColorScheme(color)
     color = color or "tokyonight"
     vim.cmd.colorscheme(color)
 
-    -- apply colorscheme 
+    -- apply colorscheme
     local command = "sed -i '/source-file/c \\source-file ~/.config/tmux/themes/colorschemes/" .. color .. "' ~/.config/tmux/themes/theme.conf"
     local handle = io.popen(command)
 
