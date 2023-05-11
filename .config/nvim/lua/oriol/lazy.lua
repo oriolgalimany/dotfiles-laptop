@@ -82,6 +82,9 @@ require('lazy').setup({
         }
     },
 
+    -- LSP icons
+    'onsails/lspkind.nvim',
+
     -- indentation guides to all lines
     'lukas-reineke/indent-blankline.nvim',
 
