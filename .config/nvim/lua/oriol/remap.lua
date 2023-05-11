@@ -9,3 +9,11 @@ vim.keymap.set("i", "kj", "<esc>")
 
 -- clear search highlights
 vim.keymap.set("n", "<leader>n", ":noh<CR>")
+
+-- center cursor on c-d c-u
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+
+-- center cursor on searches
+vim.keymap.set("n", "n", "nzz")
+vim.keymap.set("n", "N", "Nzz")

@@ -14,9 +14,3 @@ cmd [[
   augroup end
 ]]
 
-cmd [[
-  augroup TrimBlankLines
-    autocmd!
-    autocmd BufWritePre * :%s#\($\n\s*\)\+\%$##
-  augroup end
-]]

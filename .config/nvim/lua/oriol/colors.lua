@@ -1,5 +1,3 @@
---vim.api.nvim_set_hl(0, "Normal", { bg="none" })
---vim.api.nvim_set_hl(0, "NormalFloat", { bg="none" })
 
 function SetColorScheme(color)
     color = color or "tokyonight"
@@ -13,9 +11,20 @@ function SetColorScheme(color)
        handle:close()
     end
 
+    -- make colorscheme persisten
+    command = "sed -i '/SetColorScheme(\"/c \\SetColorScheme(\"" .. color .. "\")' ~/.config/nvim/lua/oriol/colors.lua"
+
+    handle = io.popen(command)
+
+    if handle ~= nil then
+       handle:close()
+    end
+
     -- refresh theme
     command= "tmux source-file ~/.config/tmux/themes/theme.conf"
     os.execute(command)
     os.execute(command)
 end
+
+SetColorScheme("catppuccin")
 

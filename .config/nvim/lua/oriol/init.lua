@@ -1,6 +1,6 @@
 require("oriol.remap")
 require("oriol.set")
-require("oriol.packer")
+require("oriol.lazy")
 require("oriol.colors")
 require("oriol.autocmd")
 require("oriol.plugin.telescope")
