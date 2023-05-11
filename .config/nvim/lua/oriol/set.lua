@@ -49,3 +49,20 @@ vim.opt.ignorecase = true
 -- toggle relative numbers on focus
 vim.api.nvim_create_augroup("numbertoggle", { clear = true })
 
+-- open NetRW explorer when open a directory
+local function open_explorer(data)
+
+  -- buffer is a directory
+  local directory = vim.fn.isdirectory(data.file) == 1
+
+  if not directory then
+    return
+  end
+
+  -- change to the directory
+  vim.cmd.cd(data.file)
+
+  -- open the explorer
+  vim.cmd("Ex")
+end
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_explorer })
