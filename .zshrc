@@ -73,14 +73,19 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git 
-    web-search 
-    copypath 
+    git
+    web-search
+    copypath
     vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# better autocompletion binds
+bindkey '\t' autosuggest-accept
+bindkey '^M' autosuggest-execute
+bindkey '^ ' complete-word
 
 # User configuration
 
@@ -109,7 +114,7 @@ export EDITOR='nvim'
 # For a full list of active aliases, run `alias`.
 
 # enable zsh vim mode
-bindkey -v 
+bindkey -v
 export KEYTIMEOUT=1
 # set default esc to jk and kj
 bindkey -M viins 'jk' vi-cmd-mode
