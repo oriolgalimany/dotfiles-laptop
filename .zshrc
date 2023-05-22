@@ -84,6 +84,8 @@ source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # better autocompletion binds
 #bindkey '\t' autosuggest-accept
+autoload -U select-word-style
+select-word-style normal
 bindkey '\t' forward-word
 bindkey '^ ' complete-word
 
