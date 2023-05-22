@@ -84,6 +84,7 @@ source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # better autocompletion binds
 #bindkey '\t' autosuggest-accept
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 autoload -U select-word-style
 select-word-style normal
 bindkey '\t' forward-word
