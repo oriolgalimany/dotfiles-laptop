@@ -1,12 +1,13 @@
-configuration 
+configuration
 {
   display-drun: "";
-  /*display-window: "Windows:";*/
+  display-window: "";
   drun-display-format: "{icon} {name}";
   font: "Noto Sans Nerd Font 12";
   modi: "window,run,drun";
   show-icons: true;
   icon-theme: "Papirus";
+  kb-delete-entry: "Alt+q";
 }
 
 @theme "/dev/null"
@@ -15,7 +16,7 @@ configuration
 
 * {
   background-color: @backgroundColor;
-  
+
   border: 0;
   border-color: Red;
   margin: 0;
@@ -26,7 +27,7 @@ configuration
 window {
   width: 35%;
   border-radius: 8px;
-  border: 0; 
+  border: 0;
   border-color: @borderColor;
 }
 
