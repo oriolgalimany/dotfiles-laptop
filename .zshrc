@@ -83,8 +83,8 @@ source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # better autocompletion binds
-bindkey '\t' autosuggest-accept
-bindkey '^M' autosuggest-execute
+#bindkey '\t' autosuggest-accept
+bindkey '\t' forward-word
 bindkey '^ ' complete-word
 
 # User configuration
