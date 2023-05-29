@@ -1,5 +1,3 @@
-#source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh If you come from bash you might have to change your $PATH.
-
 export PATH=$HOME/bin:/usr/local/bin:usr/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -19,7 +17,7 @@ ZSH_THEME="robbyrussell"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="false"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -87,8 +85,6 @@ source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 autoload -U select-word-style
 select-word-style normal
-bindkey '\t' forward-word
-bindkey '^ ' complete-word
 
 # User configuration
 

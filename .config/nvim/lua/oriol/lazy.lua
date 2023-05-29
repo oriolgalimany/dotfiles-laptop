@@ -35,13 +35,12 @@ require('lazy').setup({
     { 'rose-pine/neovim', name = 'rose-pine' },
 
     {
-        'ghifarit53/tokyonight-vim',
-        name = 'tokyonight',
+        "folke/tokyonight.nvim",
     },
 
     'catppuccin/nvim', name = 'catppuccin',
 
-   -- treesitter syntax highlighting
+    -- treesitter syntax highlighting
     {
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate'

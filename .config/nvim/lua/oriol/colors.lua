@@ -1,6 +1,6 @@
 
 function SetColorScheme(color)
-    color = color or "tokyonight"
+    color = color or "tokyonight-night"
     vim.cmd.colorscheme(color)
 
     -- apply colorscheme
@@ -9,6 +9,10 @@ function SetColorScheme(color)
 
     if handle ~= nil then
        handle:close()
+    end
+
+    if color=="tokyonight-night" then
+        color = "tokyonight"
     end
 
     -- make colorscheme persisten
@@ -26,5 +30,5 @@ function SetColorScheme(color)
     os.execute(command)
 end
 
-SetColorScheme("catppuccin")
+SetColorScheme("tokyonight")
 
