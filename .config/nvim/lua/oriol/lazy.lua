@@ -101,4 +101,7 @@ require('lazy').setup({
 
     -- toggle between relative numbers and absolute depending on thefocus
     'sitiom/nvim-numbertoggle',
+
+    -- auto closing pairs when writing (["
+    { 'echasnovski/mini.pairs', version = '*' },
 })

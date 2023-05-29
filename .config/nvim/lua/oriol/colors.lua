@@ -3,21 +3,22 @@ function SetColorScheme(color)
     color = color or "tokyonight-night"
     vim.cmd.colorscheme(color)
 
-    -- apply colorscheme
-    local command = "sed -i '/source-file/c \\source-file ~/.config/tmux/themes/colorschemes/" .. color .. "' ~/.config/tmux/themes/theme.conf"
+    -- make colorscheme persisten
+    local command = "sed -i '/SetColorScheme(\"/c \\SetColorScheme(\"" .. color .. "\")' ~/.config/nvim/lua/oriol/colors.lua"
+
     local handle = io.popen(command)
 
     if handle ~= nil then
        handle:close()
     end
 
+
     if color=="tokyonight-night" then
         color = "tokyonight"
     end
 
-    -- make colorscheme persisten
-    command = "sed -i '/SetColorScheme(\"/c \\SetColorScheme(\"" .. color .. "\")' ~/.config/nvim/lua/oriol/colors.lua"
-
+    -- apply colorscheme
+    command = "sed -i '/source-file/c \\source-file ~/.config/tmux/themes/colorschemes/" .. color .. "' ~/.config/tmux/themes/theme.conf"
     handle = io.popen(command)
 
     if handle ~= nil then
@@ -30,5 +31,5 @@ function SetColorScheme(color)
     os.execute(command)
 end
 
-SetColorScheme("tokyonight")
+SetColorScheme("tokyonight-night")
 
