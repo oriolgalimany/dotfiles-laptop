@@ -26,17 +26,11 @@ require('lazy').setup({
         name = 'night-owl',
     },
 
-    {
-        'nyngwang/nvimgelion',
-        config = function ()
-        end
-    },
+    'nyngwang/nvimgelion',
 
     { 'rose-pine/neovim', name = 'rose-pine' },
 
-    {
-        "folke/tokyonight.nvim",
-    },
+    'folke/tokyonight.nvim',
 
     'catppuccin/nvim', name = 'catppuccin',
 
@@ -104,4 +98,7 @@ require('lazy').setup({
 
     -- auto closing pairs when writing (["
     { 'echasnovski/mini.pairs', version = '*' },
+
+    -- easy comments
+    'numToStr/Comment.nvim',
 })
