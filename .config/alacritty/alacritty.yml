@@ -8,8 +8,10 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-#import:
+import:
   #  - /path/to/alacritty.yml
+  - ~/.config/alacritty/colorschemes/digerati.yml
+  #- ~/.config/alacritty/colorschemes/tokyonight.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -85,6 +87,7 @@ window:
   # and `light`. Set this to `None` to use the default theme variant.
   #gtk_theme_variant: None
   opacity: 0.75
+  #opacity: 0.85
   #scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
@@ -788,30 +791,3 @@ cursor:
   #log_level: Warn
   # Print all received window events.
   #print_events: false
-colors:
-  name: Digerati
-  author: ""
-  primary:
-    background: "#060606"
-    foreground: "#ffffff"
-  cursor:
-    text: "#000000"
-    cursor: "#ffffff"
-  normal:
-    black: "#303030"
-    red: "#c03000"
-    green: "#b1d631"
-    yellow: "#fecf35"
-    blue: "#426870"
-    magenta: "#6d506d"
-    cyan: "#4bb5c1"
-    white: "#e2e2e5"
-  bright:
-    black: "#5f5f5f"
-    red: "#ff3a78"
-    green: "#a6cd07"
-    yellow: "#b5c865"
-    blue: "#4a7781"
-    magenta: "#ff3b77"
-    cyan: "#4bb5c1"
-    white: "#e2e2e5"
