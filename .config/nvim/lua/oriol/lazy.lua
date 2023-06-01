@@ -36,7 +36,7 @@ require('lazy').setup({
 
     -- treesitter syntax highlighting
     {
-        'nvim-treesitter/nvim-treesitter',
+       'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate'
     },
 
@@ -101,4 +101,7 @@ require('lazy').setup({
 
     -- easy comments
     'numToStr/Comment.nvim',
+
+    -- formatting
+    'jose-elias-alvarez/null-ls.nvim'
 })
