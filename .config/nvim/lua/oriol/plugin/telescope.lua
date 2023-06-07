@@ -1,9 +1,9 @@
 local builtin = require('telescope.builtin')
 
 find_in_gitdir = function(opts)
-  opts = opts or {}
-  opts.cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
-  builtin.find_files(opts)
+    opts = opts or {}
+    opts.cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
+    builtin.find_files(opts)
 end
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
