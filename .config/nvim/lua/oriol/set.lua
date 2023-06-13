@@ -16,7 +16,7 @@ vim.opt.smartindent = true
 vim.opt.wrap = true
 
 -- don't show the command line when it's not needed
-vim.opt.cmdheight=0
+vim.opt.cmdheight = 0
 
 -- true colors
 vim.opt.termguicolors = true
@@ -38,9 +38,9 @@ vim.opt.signcolumn = "auto"
 -- share clipboard btwn vim and linux; y-p = ctrl-c ctrl-v
 vim.opt.clipboard = { "unnamed", "unnamedplus" }
 
--- vertical splits to the left and horizontal below
+-- vertical splits to the right and horizontal below
 vim.opt.splitbelow = true
-vim.opt.splitright = false
+vim.opt.splitright = true
 
 -- case insensitive only in lowercase searches, otherwise case sensitive
 vim.opt.smartcase = true
@@ -51,18 +51,20 @@ vim.api.nvim_create_augroup("numbertoggle", { clear = true })
 
 -- open NetRW explorer when open a directory
 local function open_explorer(data)
+    -- buffer is a directory
+    local directory = vim.fn.isdirectory(data.file) == 1
 
-  -- buffer is a directory
-  local directory = vim.fn.isdirectory(data.file) == 1
+    if not directory then
+        return
+    end
 
-  if not directory then
-    return
-  end
+    -- change to the directory
+    vim.cmd.cd(data.file)
 
-  -- change to the directory
-  vim.cmd.cd(data.file)
-
-  -- open the explorer
-  vim.cmd("Ex")
+    -- open the explorer
+    vim.cmd("Ex")
 end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_explorer })
+
+-- no lsp log file, so it cannot grow infinitely, change to "debug" if needed
+vim.lsp.set_log_level("off")

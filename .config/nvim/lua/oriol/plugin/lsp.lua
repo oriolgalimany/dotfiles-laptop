@@ -31,6 +31,7 @@ lsp.format_on_save({
             'css',
             'graphql',
             'json',
+            'svelte',
         },
     }
 })
