@@ -106,7 +106,7 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     #family: monospace
-    # family: JetBrainsMono Nerd Font
+    #family: JetBrainsMono Nerd Font
     family: SF Mono
     #family: RobotoMono NF
     #family: NotoSans Nerd Font Mono
@@ -142,7 +142,8 @@ font:
 
   # Point size
   #size: 14.5 #14.5 matches perfectly 1080p screen
-  size: 15
+  #size: 15
+  size: 16.5
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.

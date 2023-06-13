@@ -17,3 +17,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 -- center cursor on searches
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
+
+-- add blank newline with return
+vim.keymap.set("n", "<enter>", "_i<enter><esc>_k")

@@ -14,3 +14,13 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>ps', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
+
+local telescope = require('telescope')
+
+telescope.setup {
+    defaults = {
+        file_ignore_patterns = {
+            "node_modules", "build", "undodir"
+        },
+    }
+}
