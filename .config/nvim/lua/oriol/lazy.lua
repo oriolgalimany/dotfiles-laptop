@@ -70,13 +70,14 @@ require('lazy').setup({
     -- colorize colorcodes
     'norcalli/nvim-colorizer.lua',
     -- file tree explorer
-    {
+    'tpope/vim-vinegar',
+    --[[ {
         'nvim-tree/nvim-tree.lua',
         dependencies = {
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
         tag = 'nightly'                    -- optional, updated every week. (see issue #1193)
-    },
+    }, ]]
     -- toggle between relative numbers and absolute depending on thefocus
     'sitiom/nvim-numbertoggle',
     -- auto closing pairs when writing (["
