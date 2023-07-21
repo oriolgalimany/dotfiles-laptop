@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>x", vim.cmd.Ex)
+
+--vim.keymap.set("n", "<leader>x", vim.cmd.Ex)
 
 -- disable esc in insert mode
 vim.keymap.set("i", "<esc>", "<nop>")

@@ -50,7 +50,7 @@ vim.opt.ignorecase = true
 vim.api.nvim_create_augroup("numbertoggle", { clear = true })
 
 -- open NetRW explorer when open a directory
-local function open_explorer(data)
+--[[ local function open_explorer(data)
     -- buffer is a directory
     local directory = vim.fn.isdirectory(data.file) == 1
 
@@ -65,6 +65,9 @@ local function open_explorer(data)
     vim.cmd("Ex")
 end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_explorer })
+ ]]
+-- configure NetRW
+vim.g.netrw_banner = 0
 
 -- no lsp log file, so it cannot grow infinitely, change to "debug" if needed
 vim.lsp.set_log_level("off")
