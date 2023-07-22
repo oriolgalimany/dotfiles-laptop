@@ -82,6 +82,8 @@ require('lazy').setup({
     'sitiom/nvim-numbertoggle',
     -- auto closing pairs when writing (["
     { 'echasnovski/mini.pairs', version = '*' },
+    -- auto html closing tags
+    'windwp/nvim-ts-autotag',
     -- easy comments
     'numToStr/Comment.nvim',
     -- formatting

@@ -13,5 +13,6 @@ require("oriol.plugin.cmp")
 require("oriol.plugin.colorizer")
 --require("oriol.plugin.nvimtree")
 require("oriol.plugin.pairs")
+require("oriol.plugin.nvim-ts-autotag")
 require("oriol.plugin.comment")
 require("oriol.plugin.null-ls") -- needs to init after lsp-zero setup
