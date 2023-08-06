@@ -16,3 +16,4 @@ require("oriol.plugin.pairs")
 require("oriol.plugin.nvim-ts-autotag")
 require("oriol.plugin.comment")
 require("oriol.plugin.null-ls") -- needs to init after lsp-zero setup
+require("oriol.plugin.session")

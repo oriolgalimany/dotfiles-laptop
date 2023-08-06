@@ -1,5 +1,3 @@
--- Make sure you setup `cmp` after lsp-zero
-
 local cmp = require('cmp')
 
 cmp.setup({

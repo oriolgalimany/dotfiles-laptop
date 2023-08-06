@@ -62,6 +62,7 @@ lsp.format_on_save({
             'graphql',
             'json',
             'svelte',
+            'bash',
         },
     }
 })
