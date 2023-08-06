@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:usr/bin:$PATH
+export PATH=$HOME:$HOME/bin:/usr/local/bin:usr/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/oriol/.oh-my-zsh"
@@ -128,9 +128,13 @@ bindkey -M menuselect 'down' vi-down-line-or-history
 bindkey -M menuselect 'up' vi-up-line-or-history
 bindkey -M menuselect 'right' vi-forward-char
 
-# Example aliases
-#cd(){builtin cd "$@" && ls;}
-#alias ls="ls -lah --color=always"
+# open tmux sessionizer
+bindkey -s '^t' '~/.config/tmux/scripts/tmux-sessionizer\n'
+# open fzf
+bindkey -s '^f' 'cd $(find . -type d | fzf)\n'
+
+# aliases
+alias t='/home/oriol/tmux-opener'
 alias ls="logo-ls"
 alias vim="nvim"
 alias spotify="flatpak run com.spotify.Client"

@@ -39,6 +39,8 @@ require('lazy').setup({
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
     },
+    -- web devicons
+    'nvim-tree/nvim-web-devicons',
     -- vim-tmux seamless navigation with ctrl+hjkl
     'christoomey/vim-tmux-navigator',
     -- LSP
@@ -58,6 +60,7 @@ require('lazy').setup({
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'hrsh7th/cmp-nvim-lua' },
             { 'hrsh7th/cmp-nvim-lsp-signature-help' },
+
             -- Snippets
             { 'L3MON4D3/LuaSnip' },
             { 'rafamadriz/friendly-snippets' },
@@ -88,4 +91,9 @@ require('lazy').setup({
     'numToStr/Comment.nvim',
     -- formatting
     'jose-elias-alvarez/null-ls.nvim',
+    -- auto saving nvim sessions
+    {
+        'dhruvasagar/vim-prosession',
+        dependencies = { 'tpope/vim-obsession' }
+    }
 })

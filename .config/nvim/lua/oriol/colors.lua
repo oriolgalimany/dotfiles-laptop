@@ -4,7 +4,7 @@ function SetColorScheme(color)
 
     -- make colorscheme persisten
     local command = "sed -i '/SetColorScheme(\"/c \\SetColorScheme(\"" ..
-    color .. "\")' ~/.config/nvim/lua/oriol/colors.lua"
+        color .. "\")' ~/.config/nvim/lua/oriol/colors.lua"
 
     local handle = io.popen(command)
 
@@ -35,7 +35,7 @@ let stl_fg         = synIDattr(hlID('StatusLine')  , 'fg')
  ]]
     -- apply colorscheme
     command = "sed -i '/source-file/c \\source-file ~/.config/tmux/themes/colorschemes/" ..
-    color .. "' ~/.config/tmux/themes/theme.conf"
+        color .. "' ~/.config/tmux/themes/theme.conf"
     handle = io.popen(command)
 
     if handle ~= nil then

@@ -14,3 +14,9 @@ cmd [[
   augroup end
 ]]
 
+cmd [[
+augroup ObsessionGroup
+  autocmd!
+ autocmd BufWritePost * :silent :Prosession
+ augroup END
+]]
