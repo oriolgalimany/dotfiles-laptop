@@ -134,7 +134,7 @@ bindkey -s '^t' '~/.config/tmux/scripts/tmux-sessionizer\n'
 bindkey -s '^f' 'cd $(find . -type d | fzf)\n'
 
 # aliases
-alias t='/home/oriol/tmux-opener'
+alias t='~/.config/tmux/scripts/tmux-sessionizer'
 alias ls="logo-ls"
 alias vim="nvim"
 alias spotify="flatpak run com.spotify.Client"
