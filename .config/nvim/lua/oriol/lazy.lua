@@ -84,7 +84,7 @@ require('lazy').setup({
     -- toggle between relative numbers and absolute depending on thefocus
     'sitiom/nvim-numbertoggle',
     -- auto closing pairs when writing (["
-        'windwp/nvim-autopairs',
+    'windwp/nvim-autopairs',
     -- auto html closing tags
     'windwp/nvim-ts-autotag',
     -- easy comments
@@ -92,8 +92,5 @@ require('lazy').setup({
     -- formatting
     'jose-elias-alvarez/null-ls.nvim',
     -- auto saving nvim sessions
-    {
-        'dhruvasagar/vim-prosession',
-        dependencies = { 'tpope/vim-obsession' }
-    }
+    'rmagatti/auto-session'
 })

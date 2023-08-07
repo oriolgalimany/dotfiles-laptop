@@ -68,6 +68,7 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_explorer })
  ]]
 -- configure NetRW
 vim.g.netrw_banner = 0
+vim.g.netrw_keepdir = 0
 
 -- no lsp log file, so it cannot grow infinitely, change to "debug" if needed
 vim.lsp.set_log_level("off")
