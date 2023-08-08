@@ -71,7 +71,7 @@ require('lazy').setup({
     -- indentation guides to all lines
     'lukas-reineke/indent-blankline.nvim',
     -- colorize colorcodes
-    'norcalli/nvim-colorizer.lua',
+    'NvChad/nvim-colorizer.lua',
     -- file tree explorer
     {
         'stevearc/oil.nvim',

@@ -1,8 +1,13 @@
 local cmp = require('cmp')
 
 cmp.setup({
+    preselect = 'item',
+    completion = {
+        completeopt = 'menu,menuone,noinsert'
+    },
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        ['<C-Space>'] = cmp.mapping.complete(),
     },
     formatting = {
         fields = { 'abbr', 'kind', 'menu' },
