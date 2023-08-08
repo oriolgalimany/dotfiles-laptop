@@ -89,5 +89,5 @@ function _G.toggle_diagnostics()
     end
 end
 
-vim.api.nvim_buf_set_keymap(0, 'n', '<Leader>d', ':call v:lua.toggle_diagnostics()<CR>',
-    { silent = true, noremap = true })
+vim.keymap.set('n', '<Leader>d', ':call v:lua.toggle_diagnostics()<CR>', {})
+vim.keymap.set('n', 'ca', ':lua vim.lsp.buf.code_action()<CR>', {})
