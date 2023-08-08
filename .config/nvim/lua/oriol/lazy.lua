@@ -73,7 +73,12 @@ require('lazy').setup({
     -- colorize colorcodes
     'norcalli/nvim-colorizer.lua',
     -- file tree explorer
-    'tpope/vim-vinegar',
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
     --[[ {
         'nvim-tree/nvim-tree.lua',
         dependencies = {

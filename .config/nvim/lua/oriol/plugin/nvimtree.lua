@@ -1,8 +1,8 @@
+--[[
 require("nvim-tree").setup()
 
 vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)
 
---[[
 local function open_nvim_tree(data)
 
   -- buffer is a directory
