@@ -15,7 +15,7 @@ cmd [[
 ]]
 
 cmd [[
-    augroup ObsessionGroup
+    augroup SaveSessions
         autocmd!
         autocmd BufWritePre * :SessionSave
     augroup end
