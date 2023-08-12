@@ -6,7 +6,20 @@ find_in_gitdir = function(opts)
     builtin.find_files(opts)
 end
 
+find_dotfiles = function()
+    local opts = {
+        search_dirs = {
+            '~/.config/nvim',
+            '~/.config/tmux'
+        },
+        no_ignore = true,
+        no_ignore_parent = true
+    }
+    builtin.find_files(opts)
+end
+
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fdf', find_dotfiles, {})
 vim.keymap.set('n', '<leader>fr', find_in_gitdir, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
