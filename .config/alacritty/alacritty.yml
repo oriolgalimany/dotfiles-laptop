@@ -86,7 +86,7 @@ window:
   # Override the variant of the GTK theme. Commonly supported values are `dark`
   # and `light`. Set this to `None` to use the default theme variant.
   #gtk_theme_variant: None
-  opacity: 0.75
+  opacity: 0.70
   #opacity: 0.85
   #scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -141,9 +141,9 @@ font:
     #style: Bold Italic
 
   # Point size
-  #size: 14.5 #14.5 matches perfectly 1080p screen
-  #size: 15
-  size: 16.5
+  #size: 14.5 #14.5  perfect for desktop - matches 1080p screen
+  #size: 16.5 # 16.5 is perfect for laptop
+  size: 14.5
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
@@ -791,4 +791,3 @@ cursor:
   #   - Trace
   #log_level: Warn
   # Print all received window events.
-  #print_events: false

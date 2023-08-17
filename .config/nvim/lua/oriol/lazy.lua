@@ -27,6 +27,7 @@ require('lazy').setup({
     'rose-pine/neovim',
     'folke/tokyonight.nvim',
     'catppuccin/nvim',
+    'loctvl842/monokai-pro.nvim',
     -- treesitter syntax highlighting
     {
         'nvim-treesitter/nvim-treesitter',
@@ -79,13 +80,6 @@ require('lazy').setup({
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
-    --[[ {
-        'nvim-tree/nvim-tree.lua',
-        dependencies = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
-        tag = 'nightly'                    -- optional, updated every week. (see issue #1193)
-    }, ]]
     -- toggle between relative numbers and absolute depending on thefocus
     'sitiom/nvim-numbertoggle',
     -- auto closing pairs when writing (["
@@ -97,5 +91,12 @@ require('lazy').setup({
     -- formatting
     'jose-elias-alvarez/null-ls.nvim',
     -- auto saving nvim sessions
-    'rmagatti/auto-session'
+    'rmagatti/auto-session',
+    -- diagnostics management
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+    -- git integration
+    'tpope/vim-fugitive'
 })
