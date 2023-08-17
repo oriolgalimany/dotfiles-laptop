@@ -10,7 +10,11 @@ find_dotfiles = function()
     local opts = {
         search_dirs = {
             '~/.config/nvim',
-            '~/.config/tmux'
+            '~/.config/tmux',
+            '~/.config/alacritty',
+            '~/.config/i3',
+            '~/.config/polybar',
+            '~/.config/picom'
         },
         no_ignore = true,
         no_ignore_parent = true
