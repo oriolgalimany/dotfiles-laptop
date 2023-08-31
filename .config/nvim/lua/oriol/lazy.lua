@@ -86,6 +86,8 @@ require('lazy').setup({
     'windwp/nvim-autopairs',
     -- auto html closing tags
     'windwp/nvim-ts-autotag',
+    -- add/change/remove sorrounds
+    'tpope/vim-surround',
     -- easy comments
     'numToStr/Comment.nvim',
     -- formatting
