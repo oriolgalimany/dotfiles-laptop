@@ -5,6 +5,9 @@ require("oil").setup(
             -- "permissions",
             -- "size",
             -- "mtime",
+        },
+        keymaps = {
+            ["H"] = "actions.toggle_hidden",
         }
     }
 )
