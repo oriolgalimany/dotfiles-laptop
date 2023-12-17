@@ -1,5 +1,5 @@
 -- keep cursor as a block in insert mode
--- vim.opt.guicursor = ""
+vim.opt.guicursor = ""
 
 -- disable netrw
 vim.g.loaded_netrw = 1

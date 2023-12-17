@@ -49,3 +49,7 @@ let stl_fg         = synIDattr(hlID('StatusLine')  , 'fg')
 end
 
 SetColorScheme("tokyonight-night")
+
+local ret = vim.api.nvim_get_hl_by_name("Keyword", true)
+
+-- print(vim.inspect(ret))

@@ -20,7 +20,6 @@ require('lazy').setup({
         -- or                            , branch = '0.1.x',
         dependencies = { { 'nvim-lua/plenary.nvim' } }
     },
-
     -- colorschemes
     'haishanh/night-owl.vim',
     'nyngwang/nvimgelion',
