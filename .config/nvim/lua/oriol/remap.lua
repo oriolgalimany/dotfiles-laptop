@@ -21,3 +21,9 @@ vim.keymap.set("n", "N", "Nzz")
 
 -- add blank newline with return
 vim.keymap.set("n", "<enter>", "_i<enter><esc>_k")
+
+-- resize windows 5 pixels
+vim.keymap.set("n", "<C-w>+", ":resize +10<CR>")
+vim.keymap.set("n", "<C-w>-", ":resize -10<CR>")
+vim.keymap.set("n", "<C-w>>", ":vertical:resize +10<CR>")
+vim.keymap.set("n", "<C-w><", ":vertical:resize -10<CR>")
