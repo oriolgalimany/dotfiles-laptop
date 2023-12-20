@@ -99,5 +99,7 @@ require('lazy').setup({
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
     -- git integration
-    'tpope/vim-fugitive'
+    'tpope/vim-fugitive',
+    -- better terminal toggle and control in nvim
+    { 'akinsho/toggleterm.nvim', version = "*", config = true }
 })
