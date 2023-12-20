@@ -132,10 +132,10 @@ bindkey -M menuselect 'up' vi-up-line-or-history
 bindkey -M menuselect 'right' vi-forward-char
 
 # open tmux sessionizer
-bindkey -s '^t' '~/.config/tmux/scripts/tmux-sessionizer\n'
+bindkey -s '^f' '~/.config/tmux/scripts/tmux-sessionizer\n'
 # open fzf
 #bindkey -s '^f' 'cd $(find . -type d | fzf)\n'
-bindkey -s '^f' 'fzf\n'
+#bindkey -s '^f' 'fzf\n'
 
 # aliases
 alias t='~/.config/tmux/scripts/tmux-sessionizer'
