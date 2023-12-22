@@ -86,7 +86,11 @@ require('lazy').setup({
     -- auto html closing tags
     'windwp/nvim-ts-autotag',
     -- add/change/remove sorrounds
-    'tpope/vim-surround',
+    {
+        "kylechui/nvim-surround",
+        version = "*", -- Use for stability; omit to use `main` branch for the latest features
+        event = "VeryLazy",
+    },
     -- easy comments
     'numToStr/Comment.nvim',
     -- formatting
@@ -101,5 +105,12 @@ require('lazy').setup({
     -- git integration
     'tpope/vim-fugitive',
     -- better terminal toggle and control in nvim
-    { 'akinsho/toggleterm.nvim', version = "*", config = true }
+    { 'akinsho/toggleterm.nvim', version = "*", config = true },
+    -- markdown viewer
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    }
 })
