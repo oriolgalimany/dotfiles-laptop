@@ -258,7 +258,8 @@
     # Useful to enforce the timeout set by dunst configuration. Without this
     # parameter, an application may close the notification sent before the
     # user defined timeout.
-    ignore_dbusclose = false
+    # ignore_dbusclose = false
+    ignore_dbusclose = true
 
     ### Wayland ###
     # These settings are Wayland-specific. They have no effect when using X11
@@ -331,7 +332,7 @@
     foreground = "#C5C8C6"
     #timeout = 10
     timeout = 2
- 
+
     #highlight="#2ac3de"
     highlight="#377cf1"
     # Icon for notifications with normal urgency, uncomment to enable
