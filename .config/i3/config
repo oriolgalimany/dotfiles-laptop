@@ -130,6 +130,11 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
+# define worspace outpus if multiscreen
+workspace 1 output DisplayPort-2
+workspace 10 output DisplayPort-1
+workspace 7 output DisplayPort-1
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -242,7 +247,12 @@ exec_always --no-startup-id feh --randomize --bg-fill ~/Imatges/wallpapers/curre
 exec_always --no-startup-id systemd-run --on-calendar="*-*-* *:00:00" --user -- \
     feh --no-fehbg --bg-fill --randomize -r ~/Imatges/wallpapers/current && betterlockscreen -u ~/Imatges/wallpapers/current
 
-exec --no-startup-id picom -b
+# same random wallpaper for both screens
+exec_always --no-startup-id feh --bg-fill $random_wallpaper
+
+# exec xrandr --output DisplayPort-0 --off --output DisplayPort-2 --primary --mode 1920x1080 --pos 1920x0 --rate 144.00 --rotate normal --output HDMI-A-0 --off --output HDMI-A-1 --off --output DisplayPort-1 --mode 1920x1200 --pos 0x0 --rate 60.00 --rotate normal --output DisplayPort-3 --off --output DisplayPort-4 --off
+exec_always --no-startup-id ~/.config/i3/scripts/multiscreen.sh
+exec_always --no-startup-id picom -b
 
 #decrease keyboard repetition delay and increase the repeat rate
 exec_always --no-startup-id xset r rate 240 40
@@ -259,8 +269,6 @@ exec_always --no-startup-id dunst
 #auto start apps
 exec --no-startup-id flatpak run org.ferdium.Ferdium
 exec --no-startup-id flatpak run com.dropbox.Client
-# show volume icon
-#exec --no-startup-id volumeicon -d hw:1 &
 
 exec --no-startup-id xdg-user-dirs-update
 
