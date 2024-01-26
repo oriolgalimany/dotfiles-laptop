@@ -243,9 +243,14 @@ client.background       #FFFFFF
 for_window [class="^.*"] border pixel 0
 
 # same random wallpaper for both screens
-exec_always --no-startup-id feh --randomize --bg-fill ~/Imatges/wallpapers/current/*
+set $random_wallpaper  $(shuf -n 1 -e  ~/Imatges/wallpapers/current/*)
+exec_always --no-startup-id feh --randomize --bg-fill --screen 0 $random_wallpaper
+exec_always --no-startup-id feh --randomize --bg-fill --screen 1 $random_wallpaper
 exec_always --no-startup-id systemd-run --on-calendar="*-*-* *:00:00" --user -- \
-    feh --no-fehbg --bg-fill --randomize -r ~/Imatges/wallpapers/current && betterlockscreen -u ~/Imatges/wallpapers/current
+    sh -c 'random_wallpaper=$(shuf -n 1 -e ~/Imatges/wallpapers/current/*) && \
+    feh --no-fehbg --bg-fill --randomize -r --screen 0 "$random_wallpaper" && \
+    feh --no-fehbg --bg-fill --randomize -r --screen 1 "$random_wallpaper" && \
+    betterlockscreen -u "$random_wallpaper"'
 
 # same random wallpaper for both screens
 exec_always --no-startup-id feh --bg-fill $random_wallpaper
