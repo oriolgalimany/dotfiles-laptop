@@ -8,6 +8,7 @@ configuration
   show-icons: true;
   icon-theme: "Papirus";
   kb-delete-entry: "Alt+q";
+  kb-cancel: "Escape,Control+c";
 }
 
 @theme "/dev/null"
