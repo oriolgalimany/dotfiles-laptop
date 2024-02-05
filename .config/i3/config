@@ -131,9 +131,10 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 # define worspace outpus if multiscreen
-workspace 1 output DisplayPort-2
-workspace 10 output DisplayPort-1
-workspace 7 output DisplayPort-1
+workspace 1 output DisplayPort-2 DisplayPort-4
+workspace 10 output DisplayPort-1 DisplayPort-3
+workspace 7 output DisplayPort-1 DisplayPort-3
+workspace 8 output DisplayPort-1 DisplayPort-3
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -246,7 +247,7 @@ for_window [class="^.*"] border pixel 0
 set $random_wallpaper  $(shuf -n 1 -e  ~/Imatges/wallpapers/current/*)
 exec_always --no-startup-id feh --randomize --bg-fill --screen 0 $random_wallpaper
 exec_always --no-startup-id feh --randomize --bg-fill --screen 1 $random_wallpaper
-exec_always --no-startup-id systemd-run --on-calendar="*-*-* *:00:00" --user -- \
+exec --no-startup-id systemd-run --on-calendar="*-*-* *:00:00" --user -- \
     sh -c 'random_wallpaper=$(shuf -n 1 -e ~/Imatges/wallpapers/current/*) && \
     feh --no-fehbg --bg-fill --randomize -r --screen 0 "$random_wallpaper" && \
     feh --no-fehbg --bg-fill --randomize -r --screen 1 "$random_wallpaper" && \
