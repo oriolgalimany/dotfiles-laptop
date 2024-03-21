@@ -27,3 +27,6 @@ vim.keymap.set("n", "<C-w>+", ":resize +10<CR>")
 vim.keymap.set("n", "<C-w>-", ":resize -10<CR>")
 vim.keymap.set("n", "<C-w>>", ":vertical:resize +10<CR>")
 vim.keymap.set("n", "<C-w><", ":vertical:resize -10<CR>")
+
+-- u in visual mode to cancel the visual selection
+vim.api.nvim_set_keymap('x', 'u', '<esc>', { noremap = true, silent = true })
