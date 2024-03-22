@@ -19,8 +19,14 @@ if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     exit 0
 fi
 
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux source ~/.config/tmux/tmux.conf \; new-session -ds $selected_name -c $selected > /dev/null 2>&1
+if  tmux has-session -t=$selected_name 2> /dev/null; then
+ current_session=$(tmux display-message -p '#S')
+    if [[ "$current_session" == "$selected_name" ]]; then
+        tmux switch-client -t "$selected_name"
+        tmux send-keys "cd \"$selected\"" Enter
+        exit 0
+    fi
+    # tmux source ~/.config/tmux/tmux.conf \; new-session -ds $selected_name -c $selected > /dev/null 2>&1
 fi
 
 if  tmux has-session -t=$selected_name 2> /dev/null; then
