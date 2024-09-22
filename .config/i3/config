@@ -158,7 +158,8 @@ bindsym $mod+Shift+r exec killall polybar; exec killall volumeicon; exec i3-msg 
 # play-pause spotify
 bindsym $mod+Shift+p exec playerctl play-pause -p spotify
 bindsym $mod+Shift+bracketleft  exec playerctl previous -p spotify
-bindsym $mod+shift+bracketright exec playerctl next -p spotify
+bindsym $mod+Shift+bracketright exec playerctl next -p spotify
+bindsym $mod+Shift+o exec ~/.config/i3/scripts/audio_switch.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -281,6 +282,7 @@ exec --no-startup-id xdg-user-dirs-update
 # start xfce4 settings daemon
 exec_always --no-startup-id xfsettingsd
 for_window [class="Xfce4-settings-manager"] focus, floating disable
+exec_always --no-startup-id xfce4-power-management
 
 assign [class="Spotify"] $ws9
 assign [class="Ferdium"] $ws10

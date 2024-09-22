@@ -106,11 +106,6 @@ require('lazy').setup({
     'tpope/vim-fugitive',
     -- better terminal toggle and control in nvim
     { 'akinsho/toggleterm.nvim', version = "*", config = true },
-    -- markdown viewer
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        ft = { "markdown" },
-        build = function() vim.fn["mkdp#util#install"]() end,
-    }
+    -- VSCode-like breadcrumbs
+    "SmiteshP/nvim-navic"
 })
