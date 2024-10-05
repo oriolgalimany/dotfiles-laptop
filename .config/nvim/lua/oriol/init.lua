@@ -20,3 +20,4 @@ require("oriol.plugin.null-ls") -- needs to init after lsp-zero setup
 require("oriol.plugin.session")
 require("oriol.plugin.trouble")
 require("oriol.plugin.toggleterm")
+require("oriol.plugin.harpoon")

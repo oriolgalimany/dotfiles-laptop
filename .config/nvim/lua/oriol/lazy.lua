@@ -106,6 +106,10 @@ require('lazy').setup({
     'tpope/vim-fugitive',
     -- better terminal toggle and control in nvim
     { 'akinsho/toggleterm.nvim', version = "*", config = true },
-    -- VSCode-like breadcrumbs
-    "SmiteshP/nvim-navic"
+    -- jump between buffers
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
 })
