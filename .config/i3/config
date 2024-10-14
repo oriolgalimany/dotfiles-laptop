@@ -267,6 +267,9 @@ exec_always --no-startup-id xset r rate 240 40
 # set betterlockscreen
 exec --no-startup-id betterlockscreen -w
 
+# hide cursor when typing
+exec --no-startup-id xbanish
+
 # swap ctrl and alt keys
 #exec_always --no-startup-id xmodmap ~/.config/Xmodmap
 exec_always --no-startup-id polybar
