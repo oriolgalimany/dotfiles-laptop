@@ -16,8 +16,20 @@ for i in "${!sinks[@]}"; do
     fi
 done
 
+# find sink that is not "hdmi-stereo"
+find_next_sink() {
+    local index=$(( (current_index + 1) % ${#sinks[@]} ))
+    while [[ "${sink_names[$index]}" == *"hdmi-stereo"* ]]; do
+        index=$(( (index + 1) % ${#sinks[@]} ))
+        if [[ $index -eq $current_index ]]; then
+            exit 1
+        fi
+    done
+    echo "$index"
+}
+
 # Calculate the index of the next sink to switch to
-next_index=$(( (current_index + 1) % ${#sinks[@]} ))
+next_index=$(find_next_sink)
 
 # Switch to the next sink
 next_sink="${sinks[$next_index]}"
