@@ -151,7 +151,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r exec killall polybar; exec killall volumeicon; exec i3-msg restart
+bindsym $mod+Shift+r exec killall polybar; exec i3-msg restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
@@ -273,19 +273,18 @@ exec --no-startup-id xbanish
 # swap ctrl and alt keys
 #exec_always --no-startup-id xmodmap ~/.config/Xmodmap
 exec_always --no-startup-id polybar
-exec_always --no-startup-id volumeicon
-exec_always --no-startup-id dunst
+exec --no-startup-id sh -c 'sleep 5 && volumeicon'
+exec --no-startup-id dunst
 
 #auto start apps
 exec --no-startup-id flatpak run org.ferdium.Ferdium
-exec --no-startup-id flatpak run com.dropbox.Client
 
 exec --no-startup-id xdg-user-dirs-update
 
 # start xfce4 settings daemon
-exec_always --no-startup-id xfsettingsd
+exec --no-startup-id xfsettingsd
 for_window [class="Xfce4-settings-manager"] focus, floating disable
-exec_always --no-startup-id xfce4-power-management --restart
+exec --no-startup-id sleep 2 xfce4-power-management --restart
 
 assign [class="Spotify"] $ws9
 assign [class="Ferdium"] $ws10
