@@ -283,7 +283,7 @@ exec --no-startup-id xdg-user-dirs-update
 
 # exec --no-startup-id sh -c 'sleep 20 && xfce4-power-manager'
 # start xfce4 settings daemon
-exec xfce4-power-manager
+exec --no-startup-id xfce4-power-manager
 exec --no-startup-id xfsettingsd
 for_window [class="Xfce4-settings-manager"] focus, floating disable
 

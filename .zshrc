@@ -133,9 +133,6 @@ bindkey -M menuselect 'right' vi-forward-char
 
 # open tmux sessionizer
 bindkey -s '^f' '~/.config/tmux/scripts/tmux-sessionizer\n'
-# open fzf
-#bindkey -s '^f' 'cd $(find . -type d | fzf)\n'
-#bindkey -s '^f' 'fzf\n'
 
 # aliases
 alias t='~/.config/tmux/scripts/tmux-sessionizer'
@@ -143,3 +140,13 @@ alias ls="logo-ls"
 alias vim="nvim"
 alias spotify="flatpak run com.spotify.Client"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias n='nvim $(fzf)'
+
+#fzf
+if [ -x "$(command -v fzf)"  ]
+    then
+    source /usr/share/fzf/shell/key-bindings.zsh
+fi
+export FZF_DEFAULT_COMMAND="fd . --type f "
+# export FZF_DEFAULT_COMMAND="fd . --type f "
+# export FZF_DEFAULT_OPTS="--no-height --inline-info --preview 'bat --color=always --line-range :50 {}'"
