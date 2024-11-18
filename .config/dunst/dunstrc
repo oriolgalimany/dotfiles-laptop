@@ -33,7 +33,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 10x40
+    offset = 10x34
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -49,10 +49,10 @@
 
     # Set the progress bar height. This includes the frame, so make sure
     # it's at least twice as big as the frame width.
-    progress_bar_height = 10
+    progress_bar_height = 9
 
     # Set the frame width of the progress bar
-    progress_bar_frame_width = 1
+    progress_bar_frame_width = 0
 
     # Set the minimum width for the progress bar
     progress_bar_min_width = 150
@@ -74,7 +74,7 @@
     # notifications.
     # Set to 0 to disable.
     # If gap_size is greater than 0, this setting will be ignored.
-    separator_height = 2
+    separator_height = 0
 
     # Padding between text and separator.
     padding = 8
@@ -87,17 +87,17 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 1
+    frame_width = 0
 
     # Defines color of the frame around the notification window.
-    frame_color = "#414868"
+    #frame_color = "#414868"
     #frame_color = "#377cf1"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
     # of size frame_width will be drawn around each notification instead.
     # Click events on gaps do not currently propagate to applications below.
-    gap_size = 0
+    gap_size = 6
 
     # Define a color for the separator.
     # possible values are:
@@ -214,11 +214,11 @@
     min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 96
+    max_icon_size = 78
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
 # icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices:~/.icons/Tela-blue/16/status/:~/.icons/Tela-blue/16/devices:/usr/share/icons/Papirus/16x16/status:/usr/share/icons/Papirus/16x16/devices
-icon_path = ~/.icons:/usr/share/icons
+    icon_path = ~/.icons:/usr/share/icons
 
     ### History ###
 
@@ -313,7 +313,7 @@ icon_path = ~/.icons:/usr/share/icons
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
-    background = "#272a34"
+    background = "#23252e77"
     foreground = "#C5C8C6"
     highlight="#377cf1"
     timeout = 2
@@ -330,9 +330,12 @@ icon_path = ~/.icons:/usr/share/icons
     frame_color = "#ff0000"
     timeout = 0
 
-[appname='volume']
+[volume]
+    appname=volume
     format = "<b>%b %n%%</b>"
-    # background= "#ffffff"
+    background = "#23252e77"
+    highlight="#C5C8C6"
+    timeout = 1
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
