@@ -23,7 +23,7 @@ send_notification() {
        icon="/usr/share/icons/Tela/22/panel/audio-volume-high.svg"
     fi
 
-    dunstify -i "$icon" -a "volume" -u low -r 9993 "" "Volume" -h int:value:"$volume"
+    dunstify -i "$icon" -a "volume" -u low -r 9993 "" "Volum" -h int:value:"$volume"
 }
 
 case $1 in

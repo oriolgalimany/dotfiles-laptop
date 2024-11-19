@@ -14,7 +14,7 @@ send_notification() {
 
     brightness_percentage=$(( 100 * brightness / max_brightness ))
 
-    dunstify -i "$icon" -a "brightness" -u low -r 9994 "" "Brightness" -h int:value:"$brightness_percentage"
+    dunstify -i "$icon" -a "brightness" -u low -r 9994 "" "Brillantor" -h int:value:"$brightness_percentage"
 
 }
 
