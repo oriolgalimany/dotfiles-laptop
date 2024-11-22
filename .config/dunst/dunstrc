@@ -337,6 +337,15 @@
     highlight="#C5C8C6"
     timeout = 1
 
+[brightness]
+    appname=brightness
+    format = "<b>%b %n%%</b>"
+    background = "#23252e77"
+    highlight="#C5C8C6"
+    timeout = 1
+
+
+
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
 #

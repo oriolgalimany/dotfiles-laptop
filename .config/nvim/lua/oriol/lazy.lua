@@ -85,7 +85,7 @@ require('lazy').setup({
     'windwp/nvim-autopairs',
     -- auto html closing tags
     'windwp/nvim-ts-autotag',
-    -- add/change/remove sorrounds
+    -- add/change/remove surrounds
     {
         "kylechui/nvim-surround",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
