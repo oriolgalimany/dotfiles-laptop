@@ -150,3 +150,4 @@ fi
 export FZF_DEFAULT_COMMAND="fd . --type f "
 # export FZF_DEFAULT_COMMAND="fd . --type f "
 # export FZF_DEFAULT_OPTS="--no-height --inline-info --preview 'bat --color=always --line-range :50 {}'"
+source "$HOME/.cargo/env"

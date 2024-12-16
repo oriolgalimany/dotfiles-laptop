@@ -11,9 +11,9 @@ null_ls.setup({
         null_opts.on_attach(client, bufnr)
     end,
     sources = {
-        null_ls.builtins.formatting.prettierd, -- html, css, js
-        null_ls.builtins.formatting.beautysh,  -- bashscripts
-        null_ls.builtins.code_actions.eslint_d,
+        -- null_ls.builtins.formatting.prettierd, -- html, css, js
+        -- null_ls.builtins.formatting.beautysh,  -- bashscripts
+        -- null_ls.builtins.code_actions.eslint_d,
 
     }
 })

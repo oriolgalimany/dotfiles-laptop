@@ -26,7 +26,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l
 
 #bindsym $mod+shift+x exec i3lock -c 000000
-bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l
+#bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -42,7 +42,6 @@ bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/volume.sh mute
 
 bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/brightness.sh up
 bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/brightness.sh down
-
 
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -144,6 +143,9 @@ workspace 10 output DisplayPort-1 DisplayPort-3
 workspace 7 output DisplayPort-1 DisplayPort-3
 workspace 8 output DisplayPort-1 DisplayPort-3
 
+# Move the current workspace to the next output
+bindsym $mod+x move workspace to output next
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -159,7 +161,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r exec killall polybar; exec i3-msg restart
+bindsym $mod+Shift+r exec killall polybar; exec killall zscroll; exec i3-msg restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 

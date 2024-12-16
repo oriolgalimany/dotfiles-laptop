@@ -69,7 +69,7 @@ require('lazy').setup({
     -- LSP icons
     'onsails/lspkind.nvim',
     -- indentation guides to all lines
-    'lukas-reineke/indent-blankline.nvim',
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl",  opts = {} },
     -- colorize colorcodes
     'NvChad/nvim-colorizer.lua',
     -- file tree explorer
@@ -94,7 +94,7 @@ require('lazy').setup({
     -- easy comments
     'numToStr/Comment.nvim',
     -- formatting
-    'jose-elias-alvarez/null-ls.nvim',
+    'nvimtools/none-ls.nvim',
     -- auto saving nvim sessions
     'rmagatti/auto-session',
     -- diagnostics management
@@ -105,11 +105,17 @@ require('lazy').setup({
     -- git integration
     'tpope/vim-fugitive',
     -- better terminal toggle and control in nvim
-    { 'akinsho/toggleterm.nvim', version = "*", config = true },
+    { 'akinsho/toggleterm.nvim',             version = "*", config = true },
     -- jump between buffers
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" }
+    },
+    -- improve vim skills
+    {
+        "m4xshen/hardtime.nvim",
+        dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+        opts = {}
     },
 })
