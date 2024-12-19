@@ -1,5 +1,5 @@
 require('auto-session').setup {
-    auto_session_root_dir = '~/.local/share/nvim/session/',
-    auto_session_suppress_dirs = { "~/", "~/Projects", "~/Baixades", "/" },
-    auto_restore_enabled = true,
+    auto_restore = true,
+    root_dir = "~/.local/share/nvim/session/",
+    suppressed_dirs = { "~/", "~/Projects", "~/Baixades", "/" }
 }
