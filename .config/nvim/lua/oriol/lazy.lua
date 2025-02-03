@@ -32,6 +32,7 @@ require('lazy').setup({
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate'
     },
+
     -- undotree
     'mbbill/undotree',
     -- lualine
@@ -112,10 +113,4 @@ require('lazy').setup({
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
-    -- improve vim skills
-    -- {
-    -- "m4xshen/hardtime.nvim",
-    -- dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-    -- opts = {}
-    -- },
 })

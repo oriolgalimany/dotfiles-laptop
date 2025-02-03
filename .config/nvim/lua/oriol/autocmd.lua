@@ -19,4 +19,4 @@ cmd [[
          autocmd!
          autocmd BufWritePre * silent! :SessionSave
      augroup end
- ]]
+]]
