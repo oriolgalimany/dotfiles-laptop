@@ -4,6 +4,7 @@ return {
 	opts = {
 		linters_by_ft = {
 			lua = { "luacheck" },
+			javascript = { "eslint_d" },
 		},
 	},
 	config = function()

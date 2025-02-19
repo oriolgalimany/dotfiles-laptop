@@ -37,7 +37,8 @@ vim.opt.incsearch = true
 
 -- scrolling options
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "auto"
+-- vim.opt.signcolumn = "auto"
+vim.opt.signcolumn = "number" -- display signs (git, lsp's) in the number column
 
 -- share clipboard btwn vim and linux; y-p = ctrl-c ctrl-v
 vim.opt.clipboard = { "unnamed", "unnamedplus" }
