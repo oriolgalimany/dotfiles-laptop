@@ -16,4 +16,17 @@ return {
 			block = "gb",
 		},
 	},
+	{
+		-- hightlight TODOs
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
+		keys = {
+			{
+				"<leader>tt",
+				"<cmd>TodoTrouble toggle<cr>",
+				desc = "Todo List (Trouble)",
+			},
+		},
+	},
 }

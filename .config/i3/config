@@ -138,10 +138,10 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 # define worspace outpus if multiscreen
-workspace 1 output DisplayPort-2 DisplayPort-4
-workspace 10 output DisplayPort-1 DisplayPort-3
-workspace 7 output DisplayPort-1 DisplayPort-3
-workspace 8 output DisplayPort-1 DisplayPort-3
+# workspace 1 output DisplayPort-2 DisplayPort-4
+ #workspace 10 output DisplayPort-1 DisplayPort-3
+ #workspace 7 output DisplayPort-1 DisplayPort-3
+ #workspace 8 output DisplayPort-1 DisplayPort-3
 
 # Move the current workspace to the next output
 bindsym $mod+x move workspace to output next
@@ -268,7 +268,7 @@ exec --no-startup-id systemd-run --on-calendar="*-*-* *:00:00" --user -- \
 exec_always --no-startup-id feh --bg-fill $random_wallpaper
 
 # exec xrandr --output DisplayPort-0 --off --output DisplayPort-2 --primary --mode 1920x1080 --pos 1920x0 --rate 144.00 --rotate normal --output HDMI-A-0 --off --output HDMI-A-1 --off --output DisplayPort-1 --mode 1920x1200 --pos 0x0 --rate 60.00 --rotate normal --output DisplayPort-3 --off --output DisplayPort-4 --off
-exec_always --no-startup-id ~/.config/i3/scripts/multiscreen.sh
+ #exec_always --no-startup-id ~/.config/i3/scripts/multiscreen.sh
 exec_always --no-startup-id picom -b
 
 #decrease keyboard repetition delay and increase the repeat rate
