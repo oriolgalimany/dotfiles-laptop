@@ -56,3 +56,6 @@ vim.api.nvim_create_augroup("numbertoggle", { clear = true })
 
 -- no lsp log file, so it cannot grow infinitely, change to "debug" if needed
 vim.lsp.set_log_level("off")
+
+-- :W also saves the file
+vim.cmd("command! W w")
