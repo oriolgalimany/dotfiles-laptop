@@ -1,5 +1,6 @@
 return {
 	-- colorschemes
+	"wheat-thin-wiens/rei.nvim",
 	"haishanh/night-owl.vim",
 	"nyngwang/nvimgelion",
 	"rose-pine/neovim",

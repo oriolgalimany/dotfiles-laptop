@@ -63,6 +63,9 @@ return {
 			lspconfig.html.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.tailwindcss.setup({
+				capabilities = capabilities,
+			})
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				desc = "LSP actions",
