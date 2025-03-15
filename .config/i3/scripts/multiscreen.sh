@@ -31,11 +31,16 @@ for port in "${all_ports[@]}"; do
     fi
 done
 
+# Disable eDP if DisplayPort is found
+if [[ ${#ports[@]} -gt 0 ]]; then
+    xrandr_command+=" --output eDP --off"
+fi
+
 for i in "${!ports[@]}"; do
     xrandr_command+=" --output ${ports[$i]} --mode ${resolutions[$i]}"
 
     if [[ -n $previous_port ]]; then
-        xrandr_command+=" --right-of $previous_port"
+        xrandr_command+=" --left-of $previous_port"
     fi
 
     if [[ ${resolutions[$i]} == "1920x1080" && $primary_added == false ]]; then
