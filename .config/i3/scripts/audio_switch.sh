@@ -41,5 +41,16 @@ for stream in $(pactl list short sink-inputs | awk '{print $1}'); do
     pactl move-sink-input "$stream" "$next_sink"
 done
 
+# Format notification message
+if [[ $next_sink_name == *"HyperX_Virtual_Surround_Sound"* ]]; then
+    next_sink_name="Altaveus"
+elif [[ $next_sink_name == *"HyperX_7.1"* ]]; then
+    next_sink_name="Auriculars"
+elif [[ $next_sink_name == *"analog-stereo"* ]]; then
+    next_sink_name="Altaveus Portàtil"
+elif [[ $next_sink_name == *"hdmi-stereo"* ]]; then
+    next_sink_name="HDMI"
+fi
+
 # Send notification with the new sink name using dunst and notify-send
-notify-send "Audio Output Switched" "Now using: $next_sink_name"
+notify-send "Audio Output Canviat" "$next_sink_name"
