@@ -29,6 +29,7 @@ return {
             harpoon:list():select(4)
         end)
 
+
         -- Toggle previous & next buffers stored within Harpoon list
         vim.keymap.set("n", "<C-S-P>", function()
             harpoon:list():prev()
@@ -37,9 +38,9 @@ return {
             harpoon:list():next()
         end)
 
-        -- Splits
         harpoon:extend({
             UI_CREATE = function(cx)
+                -- Splits
                 vim.keymap.set("n", "<C-v>", function()
                     harpoon.ui:select_menu_item({ vsplit = true })
                 end, { buffer = cx.bufnr })
@@ -51,6 +52,11 @@ return {
                 vim.keymap.set("n", "<C-t>", function()
                     harpoon.ui:select_menu_item({ tabedit = true })
                 end, { buffer = cx.bufnr })
+
+                -- close
+                vim.keymap.set("n", "<C-c>", function()
+                    harpoon.ui:close_menu()
+                end)
             end,
         })
     end,
