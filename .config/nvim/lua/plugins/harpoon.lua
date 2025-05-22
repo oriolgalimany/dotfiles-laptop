@@ -2,12 +2,23 @@ return {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {},
+    opts = {
+    },
 
+    settings = {
+        save_on_toggle = false,
+    },
     config = function(_, opts)
         require("harpoon").setup(opts)
 
         local harpoon = require("harpoon")
+
+        -- Setup harpoon with your custom settings
+        harpoon:setup({
+            settings = {
+                save_on_toggle = true,
+            },
+        })
 
         vim.keymap.set("n", "<leader>a", function()
             harpoon:list():add()
