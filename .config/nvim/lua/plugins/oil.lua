@@ -1,18 +1,20 @@
 return {
-	"stevearc/oil.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-	lazy = false,
-	opts = {
-		columns = {
-			-- "icon"
-			-- "permissions",
-			-- "size",
-			-- "mtime",
-		},
-		keymaps = {
-			["H"] = "actions.toggle_hidden",
-		},
-	},
+    "stevearc/oil.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+    lazy = false,
+    opts = {
+        columns = {
+            -- "icon"
+            -- "permissions",
+            -- "size",
+            -- "mtime",
+        },
+        keymaps = {
+            ["H"] = "actions.toggle_hidden",
+            ["<C-v>"] = { "actions.select", opts = { vertical = true } },
+            ["<C-s>"] = { "actions.select", opts = { horizontal = true } },
+        },
+    },
 
-	vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" }),
+    vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" }),
 }

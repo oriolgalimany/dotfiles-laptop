@@ -73,8 +73,9 @@ element {
     text-color:                  @textColor;
     cursor:                      pointer;
 }
+
 element-text {
-    font:                        "feather bold 54";
+    font:                        "Hack Nerd Font mono 54";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;

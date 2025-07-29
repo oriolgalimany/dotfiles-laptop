@@ -48,7 +48,24 @@ return {
             lspconfig.ts_ls.setup({
                 capabilities = capabilities,
             })
+
+            -- Fixes svelte lsp watcher
+            -- https://github.com/sveltejs/language-tools/issues/2008#issuecomment-2351976230
+            -- local on_attach = function(client, bufnr)
+            --     if client.name == "svelte" then
+            --         vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+            --             pattern = { "*.js", "*.ts" },
+            --             callback = function(ctx)
+            --                 client:notify("$/onDidChangeTsOrJsFile", {
+            --                     uri = ctx.match,
+            --                 })
+            --             end
+            --         })
+            --     end
+            -- end
+
             lspconfig.svelte.setup({
+                -- on_attach = on_attach,
                 capabilities = capabilities,
                 -- There is a svelte LSP bug that returns the exact same definition twice
                 -- in case of multiple results go to the first one
@@ -61,6 +78,7 @@ return {
                     end,
                 },
             })
+
             lspconfig.html.setup({
                 capabilities = capabilities,
             })
